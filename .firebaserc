@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "instituto-exito-a06b4"
+  },
+  "targets": {
+    "instituto-exito-a06b4": {
+      "hosting": {
+        "landing": [
+          "instituto-exito-a06b4"
+        ],
+        "summit": [
+          "summitexito"
+        ]
+      }
+    }
+  }
+}
