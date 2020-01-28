@@ -1,0 +1,11 @@
+
+#inspiracionais {
+  width: calc(100vw - 70px);
+  color: #3ec0ce; /* #4d57a6; */
+  background-color: #fff;
+  margin-left: auto;
+}
+
+.minWidth {
+  min-width: 100%
+}
