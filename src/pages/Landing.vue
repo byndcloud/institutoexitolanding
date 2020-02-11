@@ -346,6 +346,15 @@
           </div>
         </v-layout>
         <v-layout column my-2>
+          <div class="docBoxClearFolder"></div>
+          <div class="docBoxTitle">PORTARIA Nº 001</div>
+          <div style="align-self: center;">
+            <v-btn color="#3ec0ce" dark @click="downloadPortaria">
+              <v-icon left>cloud_download</v-icon>DOWNLOAD
+            </v-btn>
+          </div>
+        </v-layout>
+        <v-layout column my-2>
           <div class="docBoxCartilha"></div>
           <div class="docBoxTitle">Cartilha do Instituto</div>
           <div style="align-self: center;">
@@ -884,6 +893,16 @@ export default {
       link.click()
       document.body.removeChild(link)
     },
+    downloadPortaria() {
+      var link = document.createElement("a")
+      link.href =
+        "https://firebasestorage.googleapis.com/v0/b/instituto-exito-a06b4.appspot.com/o/documents%2FPORTARIA_001_DE_REGULAMENTA%C3%87%C3%83O_DOS.pdf?alt=media&token=f5dd26c5-bac2-4858-bd82-926e03833572"
+      link.target = "_blank"
+      link.download = "PortariaExito.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    },
     downloadFolder() {
       var link = document.createElement("a")
       link.href =
@@ -896,7 +915,7 @@ export default {
     },
     sendMessage() {
       const url =
-        "https://script.google.com/macros/s/AKfycbxhMzj-zcvkRZKtYHU1Czj-FeB_fPex5V4cxGkbpTSY7L5B_lKX/exec?" +
+        "https://script.google.com/macros/s/AKfycbxuYIkdFxWOPywLztmUhi3mtuy-GSk007sZN5D6-3mz2icbqZs/exec?" +
         "name=" +
         this.contact.name +
         "&mail=" +
@@ -1232,6 +1251,22 @@ body {
 
 .documents {
   padding: 4% 10%;
+}
+
+.docBoxClearFolder {
+  width: 260px;
+  height: 260px;
+  border: 15px solid #7881cc;
+  background-color: #666fb9;
+  margin: 2% 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../public/static/img/thumbs_clear_folder.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: center;
 }
 
 .docBoxFolder {
