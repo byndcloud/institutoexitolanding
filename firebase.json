@@ -10,9 +10,13 @@
       ],
       "rewrites": [      
         {
+          "source": "/doacoes{,/**}",
+          "destination": "/doacoes/index.html"
+        },
+        {
           "source": "**",
           "destination": "/index.html"
-        }      
+        }
       ]
     },
     {

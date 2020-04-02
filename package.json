@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "build-dev": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
-    "deploy-production": "yarn build && mv dist/app.html dist/index.html && firebase deploy"
+    "deploy-production": "yarn build && mv dist/app.html dist/index.html && cp -r dist-wolney/ dist/dist-wolney/ && firebase deploy"
   },
   "dependencies": {
     "@dongido/vue-viaudio": "^0.2.8",
