@@ -9,7 +9,7 @@
                   v-radio(v-for="p in ['Pessoa Física', 'Pessoa Jurídica']" :label='p' :key="p" :value="p")
               v-flex(pa-4)
                 v-text-field(v-model="cardDetail.cpf" name="cpf" label="CPF" v-if='cardDetail.personType == "Pessoa Física" ')
-                v-text-field(v-model="cardDetail.cnpj" name="cnpj" label="CNPJ" v-if='cardDetail.personType == "Pessoa Jurídica"')                
+                v-text-field(v-model="cardDetail.cnpj" name="cnpj" label="CNPJ" v-if='cardDetail.personType == "Pessoa Jurídica"')
             v-layout( wrap)
               v-flex(pa-4)
                 v-text-field(v-model="cardDetail.email" name="email" label="Endereço de email")
@@ -24,8 +24,6 @@
                 v-text-field(v-model="cardDetail.numero" name="numero" label="Número da residência")
               v-flex(pa-4)
                 v-text-field(v-model="cardDetail.complemento" name="complemento" label="Complemento (Ex.: Apt. 402)")
-                
-                
             v-layout( wrap)
               v-flex(pa-4)
                 v-text-field(v-model="cardDetail.bairro" name="bairro" label="Bairro")
@@ -42,7 +40,7 @@
             v-layout( wrap)
               v-flex(pa-4)
                 v-text-field(v-model="cardDetail.expiry" name="expiry" label="Data de validade")
-              v-flex(pa-4)  
+              v-flex(pa-4)
                 v-text-field(v-model="cardDetail.cvc" name="name" label="CVC" @focus="invertedCard = true" @blur="invertedCard = false")
         v-layout(justify-center)
           Card(
