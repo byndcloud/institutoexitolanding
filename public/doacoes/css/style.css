@@ -420,6 +420,33 @@ border:1px solid #CCC!important
   padding-top: 3%;
   max-width: 49%;
 }
+.numerico{
+    display: table;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+.numeros{
+    background:url("../img/numeros.png")center center;
+    width: 100px;
+    height: 136px;
+  font-size: 80px;
+  font-weight: 800 !important;
+  text-align: center;
+  color: #fFF; 
+    float: left;
+    padding-top: 50px
+}
+
+.s{
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.black{
+    background: #000!important;
+}
+
 /*====================================================*/
 /*====================================================*/
 .btn_hover {
@@ -18486,6 +18513,18 @@ a .h_head:hover {
   font-size: 42px!important;
     line-height: 1.0;
   font-weight: 800;
+}
+    
+    .numeros {
+    background: url(../img/numeros.png)center center;
+    width: 74px;
+    height: 126px;
+    font-size: 69px;
+    font-weight: 800 !important;
+    text-align: center;
+    color: #fFF;
+    float: left;
+    padding-top: 50px;
 }
 
 .font-branca4-50 {
