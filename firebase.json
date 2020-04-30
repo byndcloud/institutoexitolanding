@@ -8,7 +8,11 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "rewrites": [      
+      "rewrites": [
+        {
+          "source": "reuniaosemanal-zoom",
+          "destination": "/zoom-redirect.html"
+        },
         {
           "source": "/doacoes{,/**}",
           "destination": "/doacoes/index.html"
