@@ -8,10 +8,53 @@
         "**/.*",
         "**/node_modules/**"
       ],
+      "headers": [
+        {
+          "source": "reuniaosemanal-zoom",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        }
+      ],
       "rewrites": [
         {
           "source": "reuniaosemanal-zoom",
-          "destination": "/zoom-redirect.html"
+          "destination": "/redirect-zoom.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "reuniaosemanal-zoom-atualizado",
+          "destination": "/redirect-zoom.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "zoom",
+          "destination": "/redirect-zoom.html"
+        },
+        {
+          "source": "reuniaosemanal-youtube",
+          "destination": "/redirect-yt.html"
+        },
+        {
+          "source": "reuniaosemanal-live",
+          "destination": "/redirect-yt.html"
+        },
+        {
+          "source": "reuniaosemanal",
+          "destination": "/redirect-yt.html"
         },
         {
           "source": "/doacoes{,/**}",
