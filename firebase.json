@@ -17,6 +17,15 @@
               "value": "no-cache, no-store, must-revalidate"
             }
           ]
+        },
+        {
+          "source": "reuniaosemanal-youtube",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
         }
       ],
       "rewrites": [
@@ -46,7 +55,13 @@
         },
         {
           "source": "reuniaosemanal-youtube",
-          "destination": "/redirect-yt.html"
+          "destination": "/redirect-yt.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
         },
         {
           "source": "reuniaosemanal-live",
