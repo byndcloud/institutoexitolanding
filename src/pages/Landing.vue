@@ -355,6 +355,15 @@
           </div>
         </v-layout>
         <v-layout column my-2>
+          <div class="docBoxClearFolder"></div>
+          <div class="docBoxTitle">Diretrizes Programa de Mentoria</div>
+          <div style="align-self: center;">
+            <v-btn color="#3ec0ce" dark @click="downloadMentoria">
+              <v-icon left>cloud_download</v-icon>DOWNLOAD
+            </v-btn>
+          </div>
+        </v-layout>
+        <v-layout column my-2>
           <div class="docBoxCartilha"></div>
           <div class="docBoxTitle">Cartilha do Instituto</div>
           <div style="align-self: center;">
@@ -889,6 +898,16 @@ export default {
         "https://firebasestorage.googleapis.com/v0/b/instituto-exito-a06b4.appspot.com/o/documents%2FCartilha_Instituto_Exito.pdf?alt=media&token=1212a10a-143c-4086-9046-025a65709ab6"
       link.target = "_blank"
       link.download = "CartilhaExitoPdf.pdf"
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    },
+    downloadMentoria() {
+      var link = document.createElement("a")
+      link.href =
+        "https://firebasestorage.googleapis.com/v0/b/instituto-exito-a06b4.appspot.com/o/DIRETRIZES%20DO%20PROGRAMA%20DE%20%20MENTORIA%20DO%20INSTITUTO%20E%CC%82XITO%20DE%20EMPREENDEDORISMO%20(1).docx?alt=media&token=1994d906-bd81-49d1-b311-c3fb1a121373"
+      link.target = "_blank"
+      link.download = "DiretrizesMentoriaExito.docx"
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
